@@ -1,0 +1,41 @@
+<div class="container w-75">
+  <h2 class="mt-4">Cc Clientes</h2>
+  <table class="table table-secondary table-striped mt-4 text-center">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Valor</th>
+        <th scope="col">CC</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Excluir</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of ListaCc">
+        <th>{{ item.id_transferencia }}</th>
+        <td>{{ item.nomeClinte }}</td>
+        <td>{{ item.valor | currency: 'BRL' }}</td>
+        <td>{{ item.ccCliente }}</td>
+        <td>
+          <button
+            (click)="editar(item.id_transferencia)"
+            type="button"
+            class="btn btn-primary bi-pencil"
+          >
+            Editar
+          </button>
+        </td>
+        <td>
+          <button
+            (click)="excluir(item.id_transferencia)"
+            type="button"
+            class="btn btn-danger bi-trash"
+          >
+            Excluir
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

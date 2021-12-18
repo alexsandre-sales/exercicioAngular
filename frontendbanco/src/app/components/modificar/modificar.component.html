@@ -1,0 +1,47 @@
+<div class="container w-75">
+  <div class="container mt-3">
+    <h2 class="mt-4">Alterar informações</h2>
+    <div class="col">
+      <form class="form-control">
+        <div class="mb-1">
+          <label class="form-label">Cliente</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nomeclinte"
+            placeholder="Nome Completo"
+            [(ngModel)]="banco.nomeClinte"
+          />
+        </div>
+        <div class="mb-1">
+          <label class="form-label">Valor</label>
+          <input
+            type="number"
+            class="form-control"
+            name="valor"
+            placeholder="00.00"
+            [(ngModel)]="banco.valor"
+          />
+        </div>
+        <div class="mb-1">
+          <label class="form-label">Conta Corrente</label>
+          <input
+            type="number"
+            class="form-control"
+            name="ccCliente"
+            placeholder="Numero da CC"
+            [(ngModel)]="banco.ccCliente"
+          />
+        </div>
+        <div class="mt-3">
+          <button (click)="modificar()" class="btn btn-primary bi-pencil">
+            Atualizar
+          </button>
+          <button (click)="cancelar()" class="btn btn-primary bi-x-lg ms-2">
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
